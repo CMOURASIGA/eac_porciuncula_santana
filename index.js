@@ -1,28 +1,27 @@
 const express = require('express');
+const axios = require('axios');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 app.use(express.json());
 
-app.get('/webhook', (req, res) => {
-  const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
-  const mode = req.query['hub.mode'];
-  const token = req.query['hub.verify_token'];
-  const challenge = req.query['hub.challenge'];
-
-  if (mode && token && mode === 'subscribe' && token === VERIFY_TOKEN) {
-    console.log('WEBHOOK_VERIFIED');
-    res.status(200).send(challenge);
-  } else {
-    res.sendStatus(403);
-  }
+app.get('/', (req, res) => {
+  res.send('Servidor está funcionando!');
 });
 
-app.post('/webhook', (req, res) => {
-  console.log('Mensagem recebida:', req.body);
+app.post('/webhook', async (req, res) => {
+  console.log('📥 Webhook recebido:');
+  console.log(JSON.stringify(req.body, null, 2));
+
+  // Exemplo simples: apenas responde 200 OK
   res.sendStatus(200);
 });
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+
