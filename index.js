@@ -3,7 +3,7 @@ const axios = require('axios');
 const app = express();
 app.use(express.json());
 
-const token = 'EAAKOELSWQlIBOZCanAp9s6WGpLIZCbdpuGAJ7aq8ZBbmzx9i7uq2epBXeIVBYHQFFlOC9CZAZAcjGYKXpKCZConuAzdTblZCD1edGY16XGdmsxRVhoZAwgKzFjmZAnCub1xDZByZCEd7ENziz0PZBZBznBmD7C5jzD4ZAIEHycRe9Wr11n23HCiEJgLduKD5TdT94tXMHzWBJGrbLmEVIM0KfZBR2JmuIsZD'; // Substitua aqui pelo token do WhatsApp Cloud API
+const token = 'EAAKOELSWQlIBO76Bvxp0LOVdo9ygq2cRndSz8BmBmagTAVJlKsOiBPGMs3KOSDPT7hVgOjJ1HYZBskzcXSvU09y6PdVSnKyZBYTm9TVIZC1Jbr2RIds6NdklrMyY5qh249aNjtM1o6wabMlNfwZC0EKdTzRjnHTQWbLyieMUtkQqRpdHb7ZBwS4KDxpuSqMonZAwugxYdWuARoZAwMHoH5Ro4QMWAgZD'; // Substitua aqui pelo token do WhatsApp Cloud API
 const phone_number_id = '572870979253681'; // Substitua aqui pelo ID do número de telefone
 const recipient_number = '5521998934970'; // Coloque o número de destino com DDI (ex: 5581...)
 
