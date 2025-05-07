@@ -5,7 +5,7 @@ app.use(express.json());
 
 const token = 'EAAQqOwyAaXMBO03yNUNfx54bpfxc2w1P7lZAgCq8Ix41sse8h5deS1VwjjYcvRGjZBAZCFuXeXFhZCw5MZASwTQOlmrqgCcK5kE3Enf96xZCiQ9MbVJdYZAmZBC2dpn5tQEaRPZCLcvXvPgCFKDjv6ZBAswLUw4JG94JZAvCI7MvhguHsTw4H9F0a8Y4uwMlvSJ9sjktZBxkDrmZBBmIPCMIEJrwiqs4ZD'; // Substitua aqui pelo token do WhatsApp Cloud API
 const phone_number_id = '1172333008021875'; // Substitua aqui pelo ID do número de telefone
-const recipient_number = '5581XXXXXXXXX'; // Coloque o número de destino com DDI (ex: 5581...)
+const recipient_number = '5521998934970'; // Coloque o número de destino com DDI (ex: 5581...)
 
 app.get('/', (req, res) => {
   res.send('Servidor do WhatsApp Cloud está rodando 🚀');
